@@ -9,23 +9,32 @@ public class Main {
 		cane.mangia();
 		
 		Aquila aquila = new Aquila();
-		aquila.mangia();
-		aquila.verso();
 		aquila.dormi();
-		aquila.vola();
+		aquila.verso();
+		aquila.mangia();
+		faiVolare(aquila);
+			
 		
 		Delfino delfino = new Delfino();
 		delfino.dormi();
 		delfino.verso();
 		delfino.mangia();
-		delfino.nuota();
+		faiNuotare(delfino);
 		
 		Passerotto passerotto = new Passerotto();
 		passerotto.dormi();
 		passerotto.verso();
 		passerotto.mangia();
-		passerotto.vola();
-		
+		faiVolare(passerotto);
+	
+	}
+	
+	public static void faiVolare(IVolante animale) {
+		animale.vola();
+	}
+	
+	public static void faiNuotare(INuotante animale) {
+		animale.nuota();
 	}
 
 }
